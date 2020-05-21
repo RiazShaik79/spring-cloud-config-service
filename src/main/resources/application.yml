@@ -1,0 +1,23 @@
+server:
+   port: 8888
+   ssl:
+      enabled: true
+#     client-auth: need
+      key-store: classpath:config-service-cert.jks
+      key-store-password: India330$$
+      keyStoreType: JKS
+      keyStoreProvider: SUN
+      keyAlias: config-service-cert
+      trust-store: classpath:config-service-cert.jks
+      trust-store-password: India330$$
+      trust-store-type: JKS
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+#  profiles:
+#    active: native
